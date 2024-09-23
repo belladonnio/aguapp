@@ -51,7 +51,7 @@ body {
 }
 
 .nav li:nth-child(-n+3) {
-    border-right: 3px dotted dodgerblue;
+    border-right: 2px solid dodgerblue;
 
 }
 
@@ -61,7 +61,9 @@ body {
 }
 
 .nav a:hover {
-    color: #52f4f4;
+    color: #004080;
+    background-color: #9cedd2;
+    border-radius: 5px;
 }
 
 main {
