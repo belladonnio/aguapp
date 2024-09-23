@@ -1,0 +1,205 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    background-color: #004080;
+    height: 55px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu2 {
+    background-color: #004080;
+    height: 55px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+#textoSeleccion {
+    color: #f4fdfa;
+}
+
+#selectColumn {
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    list-style: none;
+    padding-right: 30px;
+    margin-left: 30px;
+}
+
+.nav li:nth-child(-n+3) {
+    border-right: 3px dotted dodgerblue;
+
+}
+
+.nav a {
+    color: #c7ffff;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #52f4f4;
+}
+
+main {
+    display: flex;
+    height: 90vh;
+}
+
+/* Cuadrante Izquierdo */
+.left-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#chartContainer {
+    /* height: 70%; */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#myChart {
+    width: 100%;
+    height: 100%;
+}
+
+.izqAbajo {
+    /* height: 30%; */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#comparisonTable {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    font-size: 16px;
+}
+
+#noInfoSites {
+    font-style: italic;
+    color: red;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+/* Cuadrante Derecho */
+.right-side {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: -20px;
+    margin-left: -10px;
+}
+
+section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.radar1, .radar2, .radar3, .donas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.about {
+    height: 100%;
+}
+
+h2 {
+    font-size: 14px;
+}
+
+span {
+    font-size: 12px;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+#logo {
+    width: 50px;
+    margin-left: 10px;
+}
+
+#titulo {
+    margin-bottom: 10px;
+}
+
+#paramFisicos {
+    font-weight: bold;
+    font-family: "Varela Round", sans-serif;
+}
+
+.content {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+li {
+    font-family: "Varela Round", sans-serif;
+}
+
+h1 {
+    font-family: "Varela Round", sans-serif;
+}
+
+h2 {
+    color: #0056b3;
+    font-family: "Varela Round", sans-serif;
+
+}
+
+h3 {
+    color: #333;
+    font-family: "Varela Round", sans-serif;
+
+}
+
+/* Ajustes adicionales */
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+    }
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos de Calidad de Agua</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        .proyecto {
+            width: 100%;
+            padding-bottom: 50px;
+        }
+
+        #aguapp-logo {
+            width: 300px;
+            margin-right: 120px;
+
+        }
+
+        .artistas {
+            /* margin-top: 20px; */
+            width: 100%;
+            text-align: center;
+            /* padding-top: 50px; */
+            margin-bottom: 100px;
+            margin-top: 60px;
+            /* padding-bottom: 0px; */
+            /* border-bottom: 1px solid #0056b3 ; */
+            background-color: rgb(239, 251, 247);
+            padding-top: 50px;
+            padding-bottom: 150px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 0px 0px #2f2f2f1a;
+        }
+
+        .acerca {
+            display: block;
+            height: 300px;
+            /* background-color: green; */
+        }
+
+        .emanuel {
+            width: calc(50% - 10px);
+            height: 350px;
+            /* background-color: blue; */
+            display: inline-block;
+            /* padding-top: 100px; */
+        }
+
+        .laura {
+            width: calc(50% - 10px);
+            height: 350px;
+            /* background-color: red; */
+            display: inline-block;
+            vertical-align: top;
+            /* padding-top: 100px; */
+        }
+
+        #parrafo1 {
+            width: 50%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            /* margin: 20px; */
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #007BFF;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #0056b3;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .avatar {
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .sponsors {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        #statement {
+            text-align: center;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .content {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="menu2">
+        <ul class="nav">
+            <li><a href="index.html">Mediciones</a></li>
+            <li><a href="parametros.html">Parámetros</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
+            <li><a href="aguapp.html" id="aguapp">AGUAPP</a></li>
+            <img src="logos/logo-aguapp.png" alt="Aguapp Logo" id="logo">
+        </ul>
+    </div>
+
+    <main class="about">
+        <section class="content">
+            <div class="proyecto">
+                <div class="proyectIzq">
+                    <img src="logos/logo-grande.png" alt="AGUAPP" style="float: right; width: 380px;" id="aguapp-logo">
+                    <h1>Acerca del Proyecto</h1>
+
+                    <p id="parrafo1"><strong>AGUAPP</strong> es una aplicación desarrollada en lenguaje web con el objetivo de
+                        visualizar<br>
+                        los datos de la calidad del agua del Río de la Plata, según la medición de la campaña<br> verano
+                        2024, en el contexto de La Red de Intercambio de Información de los Gobiernos<br> Locales
+                        (RIIGLO).<br><br>
+
+                        La RIIGLO se encuentra conformada por la Ciudad Autónoma de Buenos Aires<br> y los municipios
+                        costeros de la provincia de Buenos Aires de Tigre, San Fernando,<br> San Isidro, Vicente López,
+                        Avellaneda, Quilmes, Berazategui, Ensenada y Berisso.<br> Desde el año 2004, la misma realiza, a
+                        lo
+                        largo de aproximadamente 100 km<br> de costa del Río de la Plata, muestreos de calidad de agua
+                        representativos<br> de las 4 estaciones climáticas del año.<br><br>
+
+                        <strong>FUENTE:</strong><br>
+                        Subsecretaría de Ambiente<br><br>
+                        <strong> FECHA:</strong><br>
+                        12/08/2024<br><br>
+                        <strong> PERÍODO:</strong><br>
+                        Desde: 22/12/2023<br>
+                        Hasta: 22/03/2024<br><br>
+
+                        <strong> FUENTES DE DATOS:</strong><br>
+                        <a href="https://datos.gob.ar/dataset/ambiente-monitoreo-calidad-agua/archivo/ambiente_2.19">Monitoreo calidad del agua en el Rio de la Plata. Campaña verano 2024 (datos.gob.ar)</a><br>
+                        <a href="https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=372#">Centro de Información Medioambiental (ciam.ambiente.gob.ar)</a><br>
+                        <a href="https://monitoreo.ambiente.gob.ar/monitor/agua">Red de Monitoreo (monitoreo.ambiente.gob.ar)</a><br>
+                    </p>
+                </div>
+                <div class="proyectDer">
+
+                </div>
+            </div>
+            <div class="artistas">
+                <div class="acerca" style="text-align: left;">
+                    <h1 style="text-align: center;">Autores</h1>
+                    <p id="statement">
+                        Somos una pareja de artistas visuales egresados de la Universidad Nacional de las Artes (UNA).
+                        En 2021 participamos de la primera edición de la convocatoria Contar con Datos, siendo nuestro
+                        trabajo <a href="https://www.youtube.com/watch?v=R2AwM6AWBhs" alt="Alarma de Incendios" target="_blank" style="font-weight: bold; color: 0056b3">“Alarma de Incendios”</a> destacado en la web de los organizadores.
+
+                        En esa oportunidad abordamos la problemática de los incendios forestales en Parques Nacionales.
+                        Decidimos, ahora, continuar con el interés que merece concientizar acerca de otra cuestión
+                        medioambiental urgente: la calidad del agua del territorio en el que vivimos y con el que
+                        interactuamos.
+                    </p>
+                </div>
+                <div class="emanuel">
+                    <img src="emanuel-bellanti.jpg" alt="Emanuel Bellanti" width="200px" height="200px" class="avatar">
+                    <h2>Emanuel Bellanti</h2>
+                    <p>Lic. en Artes Visuales<br></p>
+                    <p>Docente Diseño Web UADE - Ingenieria y Ciencias Exactas</p>
+                    <p>Docente Diseño Gráfico y Multimedial ISEC</p>
+                </div>
+                <div class="laura">
+                    <img src="laura-pacio.jpeg" alt="Laura Pacio" width="200px" height="200px" class="avatar">
+                    <h2>Laura Pacio</h2>
+                    <p>Lic. en Artes Visuales</p>
+                    <p>Auditora AGCBA</p>
+                </div>
+            </div>
+            <div class="sponsors">
+                <h1 style="text-align: center; margin-bottom: 100px;">Organizadores</h1>
+                <img src="logos/Contar con datos.png" alt="Contar con datos 2024"
+                    style="width: 300px; margin-right: 20px;">
+                <img src="logos/ICC-logos-empresas-andres.jpg" alt="Universidad de San Andrés"
+                    style="width: 300px;"><br>
+                <img src="logos/data-science-lab.jpg" alt="Data Science Lab" style="width: 250px;">
+                <img src="logos/fundar.jpg" alt="Fundar" style="width: 250px;"><br>
+                <img src="logos/logo-subsecretaria-sscyt.png.jpg" alt="SSCYT"
+                    style="width: 600px; height: 120px; object-fit: cover;">
+                <br>
+                <a href="#">Volver al inicio</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos de Calidad del Agua</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="menu">
+        <label id="textoSeleccion" for="dataSelect">Seleccione el tipo de dato a visualizar:</label>
+        <select id="selectColumn">
+            <option value="tem_agua">Temperatura del Agua (°C)</option>
+            <option value="tem_aire">Temperatura del Aire (°C)</option>
+            <option value="od">Oxígeno Disuelto (mg/l)</option>
+            <option value="ph">pH</option>
+            <option value="colif_fecales_ufc_100ml">Coliformes Fecales (UFC/100ml)</option>
+            <option value="escher_coli_ufc_100ml">Escherichia Coli (UFC/100ml)</option>
+            <option value="enteroc_ufc_100ml">Enterococos (UFC/100ml)</option>
+            <option value="nitrato_mg_l">Nitrato (mg/l)</option>
+            <option value="nh4_mg_l">Amonio (mg/l)</option>
+            <option value="p_total_l_mg_l">Fósforo Total (mg/l)</option>
+            <option value="dbo_mg_l">DBO (mg/l)</option>
+            <option value="turbiedad_ntu">Turbiedad (NTU)</option>
+            <option value="clorofila_a_ug_l">Clorofila A (µg/l)</option>
+            <option value="microcistina_ug_l">Microcistina (µg/l)</option>
+            <option value="ica">Índice de Calidad del Agua (ICA)</option>
+        </select>
+
+        <ul class="nav">
+            <li><a href="index.html">Mediciones</a></li>
+            <li><a href="parametros.html">Parámetros</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
+            <li><a href="aguapp.html" id="aguapp">AGUAPP</a></li>
+            <img src="logos/logo-aguapp.png" alt="Aguapp Logo" id="logo">
+        </ul>
+    </div>
+
+    <main>
+        <!-- Cuadrante Izquierdo -->
+        <div class="left-side">
+            <section id="chartContainer">
+                <h2 id="titulo">Sitios de medición: <span>Haga click para comparar</span></h2>
+                <canvas id="myChart"></canvas>
+            </section>
+
+            <section class="izqAbajo">
+                <h2 id="tituloTabla">Tabla de Comparación</h2>
+                <div  style="display: inline-block; width: 58%;" id="comparisonTable"></div>
+                <p style="display: inline-block; width: 40%;" id="noInfoSites"></p>
+            </section>
+        </div>
+
+        <!-- Cuadrante Derecho -->
+        <div class="right-side">
+            <section class="radar1">
+                <h2>Parámetros Químicos</h2>
+                <canvas id="radarChart"></canvas>
+            </section>
+
+            <section class="radar2">
+                <h2>Contaminantes Orgánicos e Inorgánicos</h2>
+                <canvas id="radar2Chart"></canvas>
+            </section>
+
+            <section class="radar3">
+                <h2>Indicadores de Contaminación Biológica</h2>
+                <canvas id="radar3Chart"></canvas>
+            </section>
+
+            <section class="donas">
+                <label for="paramSelect" id="paramFisicos">Parámetros físicos:</label>
+                <select id="paramSelect">
+                    <option value="color">Color</option>
+                    <option value="espumas">Espumas</option>
+                    <option value="olores">Olores</option>
+                    <option value="mat_susp">Material en suspensión</option>
+                </select>
+                <canvas id="doughnutChart"></canvas>
+            </section>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

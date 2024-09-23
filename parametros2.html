@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos de Calidad de Agua</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* margin: 20px; */
+            line-height: 1.6;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #007BFF;
+            font-family: "Varela Round", sans-serif;
+
+        }
+
+
+        h2 {
+            font-size: 2em;
+            color: #0056b3;
+            font-family: "Varela Round", sans-serif;
+
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #333;
+            font-family: "Varela Round", sans-serif;
+
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+      
+
+        .menu {
+    background-color: #004080;
+    height: 55px;
+    margin-bottom: 10px;
+    border-top-right-radius: 5px;
+}
+.nav {
+    display: inline-block;
+    float: right;
+    margin-right: 50px;
+}
+
+li {
+    display: inline-block;
+    /* background-color: aquamarine; */
+    margin-top: 15px;
+    /* margin-left: 15px; */
+    width: 150px;
+}
+
+li:nth-child(-n+3) {    
+    border-right: 2px dotted aquamarine;
+}
+
+a {
+    color: rgb(199, 255, 255);
+    width: 140px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #004080;
+}
+    </style>
+    
+</head>
+<body>
+    <div class="section">
+        <h1>Agua</h1>
+        <p>El agua es el recurso vital por excelencia para la vida y el desarrollo de la sociedad. La Argentina cuenta
+            con una alta disponibilidad de recursos hídricos en el país, pero su distribución espacial y temporal es muy
+            desigual en el territorio dado fundamentalmente por sus distintas regiones climáticas. La contaminación de
+            los recursos hídricos es una de las tantas presiones que reciben los recursos hídricos y que reduce su
+            disponibilidad ya sea para consumo humano, para consumo animal, para riego, o bien, para el mantenimiento
+            del equilibrio ecológico del sistema acuático. Conocer el estado general de los cuerpos de agua del país así
+            como las posibles fuentes de contaminación es una actividad fundamental para la toma de decisiones y para la
+            implementación de políticas tendientes a minimizar la contaminación del ambiente. </p>
+    </div>
+
+    <div class="section">
+        <h2>Principales parámetros de la calidad</h2>
+        <p>Se definen los principales parámetros considerados en la Red FEMA, seleccionando aquellos que brindan
+            información sobre el metabolismo del sistema, la contaminación antrópica, el estado trófico y condiciones de
+            balneabilidad.
+        </p>
+
+        <h3>Indicadores del metabolismo del sistema acuático</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Parámetro</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>OD</td>
+                    <td>Mide la cantidad de oxígeno (O2) presente en el agua. Es una variable sumamente importante
+                        porque constituye un indicador del soporte de vida acuática. Está fuertemente influenciada por
+                        la dinámica biológica (fotosíntesis y respiración). Si los niveles de oxígeno disuelto son
+                        demasiado bajos, los peces y algunos otros organismos no pueden sobrevivir. La concentración de
+                        oxígeno disuelto se puede expresar en términos del porcentaje de saturación de oxígeno en agua.
+                        A menudo éste parámetro es utilizado para describir cualitativamente la calidad de cuerpos de
+                        agua.
+                    </td>
+                </tr>
+                <tr>
+                    <td>DBO</td>
+                    <td>Es la cantidad de oxígeno disuelto requerido por los microorganismos para la oxidación aerobia
+                        de la materia orgánica biodegradable presente en el agua. Es un indicador de contaminación
+                        orgánica biodegradable procedente de efluentes cloacales e industriales.
+                    </td>
+                </tr>
+                <tr>
+                    <td>DQO</td>
+                    <td>Parámetro ampliamente utilizado como una medida de la susceptibilidad a la oxidación de la
+                        materia orgánica e inorgánica, presente en los cuerpos de agua y efluentes cloacales e
+                        industriales. Es un parámetro que no discrimina entre materia orgánica e inorgánica, pero que da
+                        cuenta de la contaminación.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sólidos Suspendidos totales</td>
+                    <td>Es la diferencia entre los sólidos totales y sólidos disueltos totales o bien, se determina el
+                        peso seco de los sólidos retenidos en un filtro. En general, la deposición de sedimentos finos
+                        es perjudicial para organismos acuáticos por el cambio que producen en la composición,
+                        permeabilidad y estabilidad de los sedimentos de fondo del cuerpo de agua. Estas alteraciones
+                        del ambiente pueden provocar efectos en la supervivencia de huevos de peces y cambios en las
+                        comunidades de macroinvertebrados bénticos. Los efectos de sólidos suspendidos en algas se
+                        asocian a la reducción de la productividad por inhibición de la fotosíntesis, debida a la
+                        disminución de la penetración de luz.
+                    </td>
+                </tr>
+                <tr>
+                    <td>pH</td>
+                    <td>El pH es un indicador de la acidez o basicidad del agua, pero es rara vez un problema por sí
+                        mismo. El principal uso del valor de pH en un análisis de agua es para discernir si un agua
+                        presenta o no algún problema. El rango de pH para el agua de riego es de 6,5 a 8,4. Un valor
+                        anormal es una advertencia de que el agua necesita una evaluación adicional.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Conductividad Eléctrica</td>
+                    <td>La conductividad eléctrica (CE) es la capacidad de un agua de conducir electricidad. Está
+                        relacionada con la presencia de sales en solución, cuya disociación genera iones positivos y
+                        negativos capaces de transportar la energía eléctrica si se somete el líquido a un campo
+                        eléctrico.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Turbidez</td>
+                    <td>Puede indicar la descarga de aguas calentadas por procesos industriales, con impacto ecológico
+                        significativo por influencia, no sólo en el metabolismo de los organismos, sino también la
+                        disolución de oxígeno en el agua.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Temperatura</td>
+                    <td>Puede indicar la descarga de aguas calentadas por procesos industriales, con impacto ecológico
+                        significativo por influencia, no sólo en el metabolismo de los organismos, sino también la
+                        disolución de oxígeno en el agua.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Indicadores del estado trófico</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Indicador</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fósforo total</td>
+                    <td>El fósforo es un nutriente esencial para la vida y su exceso en el agua provoca eutrofización en
+                        los cuerpos de agua. Los compuestos de fosfato provienen principalmente de fertilizantes
+                        eliminados del suelo por el agua o el viento, desechos cloacales, efluentes industriales de
+                        frigoríficos, detergentes y productos de limpieza. El fósforo rara vez se encuentra en altas
+                        concentraciones en aguas superficiales sin contaminar, ya que es tomado activamente por las
+                        algas.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nitratos</td>
+                    <td>Son sales o ésteres del ácido nítrico HNO3. Los nitratos inorgánicos se forman en la naturaleza
+                        por la descomposición de compuestos nitrogenados, como las proteínas o la urea. En esta
+                        descomposición se forma amoníaco o amonio. Son indicadores, por lo tanto, de contaminación de
+                        tipo orgánica proveniente de vertidos domiciliarios o industriales.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Indicadores de tóxicos en agua</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Indicador</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cadmio</td>
+                    <td>El cadmio es comparativamente raro en ambientes naturales. Es utilizado en la industria
+                        metalurgia, galvanoplastia, componentes electrónicos, cableado, fotografía y en la fabricación
+                        de fuegos de artificio, pinturas fluorescentes, vidrios y porcelana. Concentraciones de cadmio
+                        en agua superiores a 10 µg/L están asociadas a elevada mortalidad, reducción del crecimiento,
+                        inhibición en la reproducción y otros efectos adversos en la fauna acuática.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cromo</td>
+                    <td>Las sales de cromo tiene diversas aplicaciones en la industria y su incorporación al ambiente
+                        natural constituye una grave amenaza para la fauna acuática en general. Cromato (Cr VI) es la
+                        forma dominante en soluciones acuosas y puede atravesar las membranas celulares de los peces.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Plomo</td>
+                    <td>La concentración natural de plomo en aguas superficiales no supera los pocos microgramos,
+                        mayores niveles están asociados a descargas de fábricas de baterías, basurales, talleres de
+                        fundición. El plomo es un metal no esencial que ha sido reportado como tóxico en aguas desde
+                        hace muchos años. Produce desordenes hematológicos, neurológicos, metabólicos, lesiones en las
+                        branquias, disrupción en la regulación de iones, que pueden llevarlos a la muerte.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mercurio</td>
+                    <td>Este elemento es uno de los más tóxicos introducidos al ambiente por el hombre, a partir de
+                        efluentes industriales. Los peces contaminados por mercurio sufren inhibición de procesos
+                        metabólicos, declinación de fertilidad y supervivencia. Además se bioacumula y se biomagnifica a
+                        lo largo de la cadena trófica.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Arsénico</td>
+                    <td>El arsénico es un elemento habitual en suelos, aguas naturales y organismos vivos. En la
+                        Argentina, la fuente natural de arsénico en los suelos es de origen volcánico y forma parte de
+                        una extensa zona, rica en terrenos arseníferos, que abarcan la región central y norte del país,
+                        contaminando las napas freáticas. La contaminación con arsénico puede ser también de origen
+                        antrópico. Por ejemplo, la deposición atmosférica de fracciones emitidas por la actividad
+                        industrial y por diversos efluentes líquidos de industrias, mineras y desagües cloacales. El
+                        arsénico es un elemento de alta toxicidad para los seres vivos.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cianuro</td>
+                    <td>Los cianuros pueden generarse en forma natural o ser manufacturados; la mayoría son venenos
+                        potentes y de acción rápida. Muchos de los cianuros en el suelo o el agua provienen de procesos
+                        industriales. Las fuentes principales de cianuro en el agua son las descargas de algunos
+                        procesos de minado de minerales, industrias de sustancias químicas orgánicas, plantas o
+                        manufactura de hierro o acero. Otras fuentes de cianuro son el tubo de escape de vehículos,
+                        liberaciones desde algunas industrias químicas, la incineración de basura municipal y el uso de
+                        plaguicidas que contienen cianuro. La mayor parte del cianuro producido se utiliza como
+                        compuesto básico para la industria química, para procesar metales, endurecer acero y en la
+                        producción de goma sintética.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fenoles</td>
+                    <td>Los fenoles son un importante grupo de contaminantes que entran a los cuerpos de agua,
+                        provenientes de los efluentes de varios tipos de industrias. También se forman naturalmente
+                        durante el metabolismo de organismos acuáticos, y la transformación de materia orgánica. Los
+                        fenoles son fácilmente oxidados, por lo tanto, tienen efectos negativos en las condiciones de
+                        calidad y ecológicas de los cuerpos de agua, también causan un marcado deterioro en las
+                        características organolépticas del agua.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hidrocarburos totales</td>
+                    <td>Los hidrocarburos son compuestos orgánicos que están formados únicamente por carbono e
+                        hidrógeno, se clasifican en alifáticos y aromáticos. Los hidrocarburos alifáticos comprenden los
+                        alcanos, alquenos, alquinos e hidrocarburos cíclicos. Los hidrocarburos aromáticos abarcan el
+                        benceno y sus derivados. Estos se encuentran presentes en la naturaleza formando parte del
+                        petróleo y también del gas natural. Bastantes de los productos que se usan cotidianamente son
+                        sustancias que se han obtenido a partir de éstos, es decir, del gas natural o el petróleo,
+                        productos como por ejemplo los detergentes, plásticos, insecticidas, productos de industria
+                        farmacéutica, diversos combustibles, etc. Los hidrocarburos se utilizan con frecuencia como
+                        combustibles. Los alquenos y otros derivados del benceno se consiguen directamente o también
+                        indirectamente a partir del petróleo, siendo especialmente utilizados a nivel industrial.
+                        Bastantes de este tipo de compuestos son materiales considerados de partida, en la fabricación
+                        de plásticos u otros polímeros, como por ejemplo, el etileno, el tetrafluoroetileno, el
+                        estireno, etc., siendo materias primas para la obtención de polietileno teflón, PVC, u otros.
+                        Los compuestos en las diferentes fracciones de los HT afectan la salud de manera diferente.
+                        Algunos componentes, especialmente los compuestos más pequeños como el benceno, tolueno y xileno
+                        (que se encuentran en la gasolina), pueden afectar el sistema nervioso de seres humanos. Las
+                        exposiciones a cantidades suficientemente altas pueden ser fatales.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Indicadores de las condiciones de balneabilidad de un cuerpo de agua</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Indicador</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Escherichi coli</td>
+                    <td>Se trata de una enterobacteria que se encuentra generalmente en los intestinos animales, y por
+                        ende en las aguas negras, pero es un organismo ubicuo. En individuos sanos, es decir, si la
+                        bacteria no adquiere elementos genéticos que codifican factores virulentos, la bacteria actúa
+                        como un comensal formando parte de la flora intestinal y ayudando así a la absorción de
+                        nutrientes (la virulencia depende de las cepas). Se trasmiten a través de las excretas y
+                        comúnmente por la ingestión o contacto con agua contaminada.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enterococos</td>
+                    <td>Se encuentran generalmente en los intestinos animales. Son indicadores de contaminación fecal,
+                        por lo que su presencia en los alimentos indica falta de higiene o defectuosas condiciones de
+                        conservación, excepto en alimentos en los que interviene como flora bacteriana natural de
+                        procesos fermentativos, como es el caso de quesos, embutidos crudos e incluso productos
+                        cárnicos.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Índices</h2>
+        <p>Los Índices constituyen una expresión simple de una combinación más compleja de diferentes parámetros
+            fisicoquímicos y bacteriológicos que representan la calidad del agua. El índice comprende un número, un
+            rango, una descripción verbal, un símbolo o incluso un color.
+
+            Los ICAs son instrumentos de síntesis, simplificaciones de la realidad, por lo tanto deben interpretarse
+            teniendo en cuenta sus limitaciones y en tal caso profundizar los estudios con otras herramientas de
+            diagnóstico.</p>
+
+        <h3>ICA AGUA</h3>
+        <p>Para la clasificación de los cuerpos loticos se selecciona el índice de calidad del agua recomendado por la
+            National Sanitation Foundation de Estados Unidos por ser aquel que propone una caracterización general de
+            los cuerpos de agua con nueve parámetros indicadores del metabolismo del sistema, nutrientes y
+            microbiológicos, ampliamente utilizado a nivel internacional, y porque resulta útil para comparar y
+            clasificar de manera general y simple la calidad de los recursos hídricos de la Argentina hasta tanto
+            dispongamos de un índice propio. El ICA NSF de EEUU sirve fundamentalmente para evaluar y clasificar todas
+            las principales cuencas hídricas del país, sin considerar los usos de cada curso; ni involucrando normativa
+            con la que hoy la argentina no cuenta.<br><br>
+
+            El ICA–NSF sugiere el empleo de ecuaciones de tipo multiplicativo ya que son más sensibles que las
+            ecuaciones de tipo aditivo a valores extremos, asociados a cuerpos de agua generalmente con fuertes
+            variaciones en la calidad del agua.<br><br>
+
+            <center>Formula ICA - Aire<br>
+                <img src="ica.jpg" alt="Formula ICA"><br>
+                W: peso o coeficiente de ponderación del parámetro
+                i: parámetro
+                Q: índice de calidad del parámetro
+            </center><br><br>
+
+            El ICA es un número entre 0 y 100 que califica la calidad y permite estimar el nivel de contaminación, en la
+            tabla 6 se presentan los valores del ICA y su significado en cuanto a calidad del agua. Los rangos se
+            definieron según Brown y otros, 1970. En la tabla 6 se muestra la relación entre los rangos de valores del
+            índice, la clasificación de calidad y los colores asignados.
+        </p>
+
+        <h3>Calidad del Agua</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Calidad del Agua</th>
+                    <th style="width: 60px;">ICA</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Excelente</td>
+                    <td style="background-color: #242C4F;">90-100</td>
+                    <td>El o los usos se consideran protegidos. Ningún uso considerado se interrumpe jamás. Las
+                        condiciones son iguales o muy próximas a los niveles deseables, aceptables o naturales.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Buena</td>
+                    <td style="background-color: #3E5A7E;">70-90</td>
+                    <td>Todos los usos considerados están protegidos con sólo un grado pequeño de deterioro o perjuicio.
+                        Ningún uso se interrumpe. Las condiciones raramente se apartan de los niveles deseables,
+                        aceptables o naturales.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Media</td>
+                    <td style="background-color: #FFFF5A;">50-70</td>
+                    <td>La mayoría de los usos considerados están protegidos, pero algunos pueden estar deteriorados o
+                        amenazados de deterioro. Un uso puede verse temporalmente interrumpido. Las condiciones a veces
+                        se apartan de los niveles deseables, aceptables o naturales.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mala</td>
+                    <td style="background-color: #E7BA71;">25-50</td>
+                    <td>Varios de los usos considerados están comprometidos o pueden verse amenazados de deterioro o
+                        perjuicio. Más de un uso puede estar temporalmente interrumpido. Las condiciones se apartan a
+                        menudo de los niveles deseables, aceptables o naturales.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Muy mala</td>
+                    <td style="background-color: #C62828;">0-25</td>
+                    <td>La mayoría de los usos considerados se ven perjudicados o dañados. Varios usos pueden estar
+                        temporalmente interrumpidos. Las condiciones casi siempre se apartan de los niveles deseables,
+                        aceptables o naturales.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Reportes</h2>
+        <p>Se encuentran a disposición, los reportes de las distintas fuentes con la información relevada, a los fines
+            de informar sobre la calidad del recurso, brindando de esta manera información oportuna y de fácil acceso.</p>
+        <ul style="text-align: center;">
+            <li style="width: 30%;"><a href="https://datos.gob.ar/dataset/ambiente-monitoreo-calidad-agua/archivo/ambiente_2.19">
+                <img src="logos/datosgobar-logo.svg" alt="datos.gob.ar">
+            </a></li>
+            <li style="width: 30%;"><a href="https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=372"><img src="logos/ciam-logo.png" alt="Centro de Información Ambiental" style="width: 200px;"></a></li>
+            <li style="width: 30%;"><a href="https://monitoreo.ambiente.gob.ar/monitor/agua"><img src="logos/argentinagob-2.svg" alt="Monitoreo Ambiental" style="background-color: #77a2da;"></a></li>
+        </ul>
+        <center><a href="#">Volver al inicio</a></center>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
