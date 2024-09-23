@@ -195,6 +195,12 @@ h3 {
 
 }
 
+.volver {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
 /* Ajustes adicionales */
 @media (max-width: 1024px) {
     main {
@@ -205,17 +211,17 @@ h3 {
         width: 100%;
     }
 
-    #textoSeleccion{
+    #textoSeleccion {
         display: none;
     }
 
     #selectColumn {
-        margin-left: 0;
+        margin: 0 auto;
+        width: 100%;
     }
 
     .radar1, .radar2, .radar3, .donas {
         display: block;
-        /* flex-direction: column; */
         width: 90vw;
         margin: 0 auto;
         margin-top: 10px;
@@ -226,4 +232,50 @@ h3 {
         display: block;
     }
 
+    .volver {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        flex-wrap: nowrap; /* Asegurarse de que no haya wrap */
+        height: 100%;
+        text-align: center;
+    }
+
+    .menu2 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        flex-wrap: nowrap; /* Asegurarse de que no haya wrap */
+        height: 100%;
+        text-align: center;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav li {
+        padding: 10px 0;
+        width: 100%; /* Hacer que cada link ocupe el 100% del ancho */
+        text-align: center;
+        box-sizing: border-box; /* Asegurarse de que el padding no cause overflow */
+    }
+
+    .nav li a {
+        display: block; /* Asegurar que el enlace ocupe toda la línea */
+        width: 100%; /* Asegurar que el enlace ocupe el ancho completo */
+    }
+
+    #logo {
+        display: none;
+    }
+
 }
+
+
