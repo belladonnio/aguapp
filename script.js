@@ -17,119 +17,140 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.error("Error al cargar el CSV:", error));
     }
 
-    // Grafico de Barra
+// Grafico de Barra
 
-    function updateChart(data, selectedColumn) {
-        console.log("Datos procesados:", data);
+function updateChart(data, selectedColumn) {
+    console.log("Datos procesados:", data);
 
-        const categoricalColumns = ['olores', 'color', 'espumas', 'mat_susp'];
-        let labels = [], values = [], chartData, noInfoSites = [];
+    const categoricalColumns = ['olores', 'color', 'espumas', 'mat_susp'];
+    let labels = [], values = [], chartData, noInfoSites = [];
 
-        if (window.myChart && typeof window.myChart.destroy === 'function') {
-            window.myChart.destroy();
-        }
+    if (window.myChart && typeof window.myChart.destroy === 'function') {
+        window.myChart.destroy();
+    }
 
-        data.forEach(row => {
-            if (row[selectedColumn] === "s/i") {
-                noInfoSites.push(row["sitios"]);
-            } else {
-                const value = parseFloat(row[selectedColumn]);
-                if (!isNaN(value)) {
-                    labels.push(row["sitios"]);
-                    values.push(value);
-                }
-            }
-        });
-
-        console.log("Labels filtrados:", labels);
-        console.log("Datos filtrados (" + selectedColumn + "):", values);
-
-        chartData = {
-            labels: labels,
-            datasets: [{
-                label: selectedColumn,
-                data: values,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        };
-
-        window.myChart = new Chart(document.getElementById('myChart'), {
-            type: 'bar',
-            data: chartData,
-            options: {
-                scales: {
-                    x: {
-                        beginAtZero: true,
-                        ticks: {
-                            autoSkip: false,
-                            maxRotation: 90,
-                            minRotation: 45,
-                            callback: function (value, index) {
-                                return labels[index];
-                            }
-                        }
-                    },
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                plugins: {
-                    legend: {
-                        position: 'top',
-                        display: false,
-                    },
-                    tooltip: {
-                        callbacks: {
-                            afterLabel: function (tooltipItem) {
-                                const selectedValues = selectedSites.map(site => data.find(row => row["sitios"] === site)[selectedColumn]);
-                                if (selectedValues.length > 1) {
-                                    const difference = selectedValues.reduce((acc, curr) => Math.abs(acc - curr));
-                                    return `Diferencia: ${difference.toFixed(2)}`;
-                                }
-                                return '';
-                            }
-                        }
-                    },
-                    title: {
-                        display: false,
-                        // text: `Distribución de ${selectedColumn}`
-                    }
-                },
-                onClick: function (evt, activeElements) {
-                    if (activeElements.length > 0) {
-                        const index = activeElements[0].index;
-                        const siteName = labels[index];
-
-                        if (selectedSites.includes(siteName)) {
-                            selectedSites = selectedSites.filter(site => site !== siteName);
-                        } else {
-                            if (selectedSites.length < 5) {
-                                selectedSites.push(siteName);
-                            } else {
-                                selectedSites = [siteName];
-                            }
-                        }
-
-                        updateRadarChart(data);
-                        updateRadar2Chart(data); // Actualiza el radar 2
-                        updateRadar3Chart(data); // Actualiza el radar 3
-                        updateChartWithSelectedParam(data);
-                        updateTable(data, selectedColumn);
-                        updateBarColors(this);
-                    }
-                }
-            }
-        });
-
-        const noInfoParagraph = document.getElementById('noInfoSites');
-        if (noInfoSites.length > 0) {
-            noInfoParagraph.innerHTML = `Los sitios que no tienen información son:<br>${noInfoSites.join('<br>')}`;
+    data.forEach(row => {
+        if (row[selectedColumn] === "s/i") {
+            noInfoSites.push(row["sitios"]);
         } else {
-            noInfoParagraph.textContent = '';
+            const value = parseFloat(row[selectedColumn]);
+            if (!isNaN(value)) {
+                labels.push(row["sitios"]);
+                values.push(value);
+            }
+        }
+    });
+
+    console.log("Labels filtrados:", labels);
+    console.log("Datos filtrados (" + selectedColumn + "):", values);
+
+    chartData = {
+        labels: labels,
+        datasets: [{
+            label: selectedColumn,
+            data: values,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+        }]
+    };
+
+    const options = {
+        scales: {
+            x: {
+                beginAtZero: true,
+                ticks: {
+                    autoSkip: false,
+                    maxRotation: 90,
+                    minRotation: 45,
+                    callback: function (value, index) {
+                        return labels[index];
+                    }
+                }
+            },
+            y: {
+                beginAtZero: true
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'top',
+                display: false,
+            },
+            tooltip: {
+                callbacks: {
+                    afterLabel: function (tooltipItem) {
+                        const selectedValues = selectedSites.map(site => data.find(row => row["sitios"] === site)[selectedColumn]);
+                        if (selectedValues.length > 1) {
+                            const difference = selectedValues.reduce((acc, curr) => Math.abs(acc - curr));
+                            return `Diferencia: ${difference.toFixed(2)}`;
+                        }
+                        return '';
+                    }
+                }
+            },
+            title: {
+                display: false,
+                // text: `Distribución de ${selectedColumn}`
+            }
+        },
+        onClick: function (evt, activeElements) {
+            if (activeElements.length > 0) {
+                const index = activeElements[0].index;
+                const siteName = labels[index];
+
+                if (selectedSites.includes(siteName)) {
+                    selectedSites = selectedSites.filter(site => site !== siteName);
+                } else {
+                    if (selectedSites.length < 5) {
+                        selectedSites.push(siteName);
+                    } else {
+                        selectedSites = [siteName];
+                    }
+                }
+
+                updateRadarChart(data);
+                updateRadar2Chart(data); // Actualiza el radar 2
+                updateRadar3Chart(data); // Actualiza el radar 3
+                updateChartWithSelectedParam(data);
+                updateTable(data, selectedColumn);
+                updateBarColors(this);
+            }
+        }
+    };
+
+    // Detectar resolución de pantalla y ajustar el gráfico
+    const mediaQuery = window.matchMedia("(max-width: 720px)");
+    function handleResize(e) {
+        if (e.matches) {
+            // Pantalla menor a 720px
+            options.scales.x.display = false; // Ocultar nombres de los sitios
+            document.getElementById('myChart').parentNode.style.height = "100%"; // Gráfico ocupa el 100% del contenedor
+        } else {
+            // Pantalla mayor o igual a 720px
+            options.scales.x.display = true; // Mostrar nombres de los sitios
+            document.getElementById('myChart').parentNode.style.height = ""; // Restablecer altura del contenedor
         }
     }
+
+    // Escuchar cambios en la resolución
+    mediaQuery.addListener(handleResize);
+    handleResize(mediaQuery); // Ejecutar al cargar la página
+
+    window.myChart = new Chart(document.getElementById('myChart'), {
+        type: 'bar',
+        data: chartData,
+        options: options
+    });
+
+    const noInfoParagraph = document.getElementById('noInfoSites');
+    if (noInfoSites.length > 0) {
+        noInfoParagraph.innerHTML = `Los sitios que no tienen información son:<br>${noInfoSites.join('<br>')}`;
+    } else {
+        noInfoParagraph.textContent = '';
+    }
+}
+
 
     // Radar 1
 
