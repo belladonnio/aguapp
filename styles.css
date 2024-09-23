@@ -61,8 +61,8 @@ body {
 }
 
 .nav a:hover {
-    color: #004080;
-    background-color: #9cedd2;
+    color: aqua;
+    /* background-color: #9cedd2; */
     border-radius: 5px;
 }
 
