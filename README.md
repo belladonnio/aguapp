@@ -4,7 +4,7 @@ Concurso: Contar con Datos
 
 Autores:
 Emanuel Bellanti
-https://linktr.ee/ebellanti
+https://linktr.ee/ebellanti - 
 Laura Pacio
 https://linktr.ee/laura.pacio
 
